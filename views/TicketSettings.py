@@ -47,7 +47,7 @@ class TicketSettings(nextcord.ui.View):
                 logChannel = interaction.guild.get_channel(data[0])
                 embed = nextcord.Embed(
                     title="Ticket fermé",
-                    description=f"Le ticket '{interaction.channel.name}' dans la catégorie #{interaction.channel.category.name} a été fermé par {interaction.user.mention}.",
+                    description=f"Le ticket '{interaction.channel.name}' {f'dans la catégorie #{interaction.channel.category.name}' if interaction.channel.category else ''} a été fermé par {interaction.user.mention}.",
                     color=Color.red(),
                     timestamp=nextcord.utils.utcnow()
                 )
