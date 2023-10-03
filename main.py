@@ -46,5 +46,6 @@ bot = Bot(intents = Intents.all())
 for file in os.listdir("commands"):
     if file.endswith(".py"):
         bot.load_extension(f"commands.{file[:-3]}")
-    
+   
+
 bot.run(os.getenv("TOKEN"))
